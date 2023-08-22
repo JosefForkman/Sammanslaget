@@ -1,0 +1,31 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+:root {
+    --YRGO-Red: #e31a3c;
+    --YRGO-White: #fcfcfc;
+    --YRGO-Black: #121212;
+    --YRGO-Grey: #c2c2c2;
+
+    --Font-famaly: "Roboto", sans-serif;
+}
+
+body {
+    font-family: var(--Font-famaly);
+    color: var(--YRGO-Black);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+p {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+main {
+    margin-inline: 2.5rem;
+}
