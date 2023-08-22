@@ -1,3 +1,4 @@
+/* reset style & helper classes */
 * {
     padding: 0px;
     margin: 0px;
@@ -6,6 +7,7 @@
 
 :root {
     --YRGO-Red: #e31a3c;
+    --YRGO-Blue: #336cef;
     --YRGO-White: #fcfcfc;
     --YRGO-Black: #121212;
     --YRGO-Grey: #c2c2c2;
@@ -13,19 +15,259 @@
     --Font-famaly: "Roboto", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--Font-famaly);
     color: var(--YRGO-Black);
+    background: var(--YRGO-White);
 }
 
 h1 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 p {
     font-size: 1.125rem;
     font-weight: 500;
 }
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 main {
     margin-inline: 2.5rem;
+}
+
+button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--YRGO-White);
+    background: var(--yrgo-blue, #336cef);
+    padding: 0.625rem 2.1875rem;
+    border: none;
+    border-radius: 0.625rem;
+}
+button.big {
+    font-size: 2.25rem;
+    padding: 1.5625rem 2.1875rem;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-block: 2.81rem;
+    padding-inline: 2.5rem;
+    margin-bottom: 138px;
+    border-bottom: 1px solid var(--YRGO-Grey, #c2c2c2);
+}
+
+header .logo {
+    color: var(--yrgo-black, #121212);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+    gap: 3.81rem;
+}
+
+header nav ul li {
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 0.5em 1.16em;
+}
+header nav ul li:hover {
+    background-color: #e2e2e2;
+    transition: 0.3s;
+}
+
+header nav ul li a {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--YRGO-Black);
+}
+
+header nav ul li.active a::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    content: "";
+    background-color: var(--YRGO-Black);
+    width: 100%;
+    height: 0.12em;
+}
+
+/* index.html */
+.herro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+
+    margin-bottom: 186px;
+}
+
+.herro img {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+}
+.herro a {
+    display: flex;
+    align-self: center;
+    gap: 1.25rem;
+    justify-self: end;
+    font-size: 1.5rem;
+    color: var(--YRGO-Black);
+}
+
+.herro a svg {
+    fill: var(--YRGO-Black);
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    margin-bottom: 69px;
+}
+
+.informations section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6em;
+}
+
+.progress-bar {
+    --_border-size: 4px;
+    --_check-point-size: 2rem;
+    --_check-point-count: 3;
+
+    position: relative;
+    display: flex;
+    gap: 2rem;
+}
+.progress-bar::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: calc(var(--_check-point-size) + var(--_border-size));
+    background-color: var(--YRGO-Grey);
+    width: calc(
+        ((var(--_check-point-count) * 2) * var(--_check-point-size)) -
+            (var(--_check-point-count) * var(--_border-size) * 2)
+    );
+    height: 3px;
+    /* z-index: -1; */
+}
+.progress-bar .check-point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--YRGO-White);
+
+    border-radius: 50%;
+    border: var(--_border-size) solid var(--YRGO-Grey);
+    width: var(--_check-point-size);
+    aspect-ratio: 1/1;
+}
+
+.progress-bar .check-point svg {
+    font-size: 1.5em;
+    fill: var(--YRGO-White);
+}
+
+/*  */
+
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* font-family: Arial; */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+}
+
+.stepper-item.active {
+    font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #4bb543;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+}
+
+.stepper-item:first-child::before {
+    content: none;
+}
+.stepper-item:last-child::after {
+    content: none;
 }
