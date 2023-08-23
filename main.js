@@ -10,14 +10,17 @@ steppers.forEach((stepper) => {
         // console.log(curentStepper == stepperActive);
         // console.log(curentStepper.classList.contains('active'));
 
-        curentStepper.classList = 'stepper-item active'
-
         steppers.forEach(stepper => {
             console.log(stepper.classList.contains('active'));
-            
-            if (stepper.classList.contains('active')) {
-                stepper.classList.add('active')
+            console.log(curentStepper.dataset.stepp);
+
+            if (stepper.dataset.stepp < curentStepper.dataset.stepp) {
+                stepper.classList = "stepper-item completed"
+            } else {
+                stepper.classList = "stepper-item"
             }
+
+            curentStepper.classList.add("active")
         })
     });
 });
