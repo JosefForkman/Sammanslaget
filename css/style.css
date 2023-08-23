@@ -30,6 +30,11 @@ h1 {
     font-weight: 700;
 }
 
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 p {
     font-size: 1.125rem;
     font-weight: 500;
@@ -266,4 +271,32 @@ header nav ul li.active a::after {
 }
 .stepper-item:last-child::after {
     content: none;
+}
+
+/* about.html */
+
+.header-about {
+    margin-bottom: 75px;
+}
+
+.presentations {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.person {
+    padding: 1rem 0 3rem 0;
+}
+
+.picture {
+    width: 100px;
+    height: 100px;
+}
+
+.person-header {
+    margin-bottom: 2rem;
+}
+
+.person-info {
+    font-weight: 400;
 }
