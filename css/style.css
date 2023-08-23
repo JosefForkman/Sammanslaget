@@ -26,8 +26,8 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.25rem;
+    font-weight: 700;
 }
 
 p {
@@ -116,15 +116,38 @@ header nav ul li.active a::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr auto;
-    gap: 1rem;
+    gap: 3.81rem;
 
     margin-bottom: 186px;
+}
+
+.herro h1 span {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--YRGO-Black);
+    opacity: 0.6;
+}
+
+.herro p {
+    font-size: 1.5rem;
+}
+
+.herro ul {
+    list-style: none;
+    font-size: 1.5rem;
 }
 
 .herro img {
     grid-column: 2;
     grid-row: 1 / span 2;
     justify-self: end;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 2px 5px 0px rgba(0, 0, 0, 0.1),
+        0px 10px 10px 0px rgba(0, 0, 0, 0.09),
+        0px 22px 13px 0px rgba(0, 0, 0, 0.05),
+        0px 40px 16px 0px rgba(0, 0, 0, 0.01),
+        0px 62px 17px 0px rgba(0, 0, 0, 0);
+    width: 621px;
 }
 .herro a {
     display: flex;
@@ -141,7 +164,6 @@ header nav ul li.active a::after {
 
 .informations {
     display: flex;
-    flex-direction: column;
     gap: 10rem;
 
     margin-bottom: 69px;
@@ -152,7 +174,6 @@ header nav ul li.active a::after {
     flex-direction: column;
     gap: 2.6em;
 }
-
 
 /* Stepper */
 
@@ -180,7 +201,8 @@ header nav ul li.active a::after {
     }
 } */
 
-.stepper-item::before, .stepper-item::after  {
+.stepper-item::before,
+.stepper-item::after {
     position: absolute;
     content: "";
     border-bottom: 2px solid var(--YRGO-Grey);
@@ -218,7 +240,7 @@ header nav ul li.active a::after {
     font-size: 1.5rem;
 }
 
-.stepper-item.active .step-counter{
+.stepper-item.active .step-counter {
     font-weight: bold;
     background-color: var(--YRGO-White);
     border: 4px solid var(--YRGO-Blue);
