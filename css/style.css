@@ -111,6 +111,20 @@ header nav ul li.active a::after {
     height: 0.12em;
 }
 
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding-block: 3.44rem;
+    margin-top: 220px;
+    border-top: 1px solid var(--YRGO-Grey, #c2c2c2);
+}
+
+footer p {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
 /* index.html */
 .herro {
     display: grid;
