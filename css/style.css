@@ -199,69 +199,82 @@ header nav ul li.active a::after {
     display: flex;
     justify-content: space-between;
     /* font-family: Arial; */
-    margin-top: 50px;
-    margin-bottom: 20px;
+    /* margin-top: 50px;
+    margin-bottom: 20px; */
+    width: 50%;
+    margin-inline: auto;
 }
 .stepper-item {
+    --_stepper-size: 36px;
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
     flex: 1;
-
-    @media (max-width: 768px) {
+}
+/* @media (max-width: 768px) {
+    .stepper-item {
         font-size: 12px;
     }
-}
+} */
 
-.stepper-item::before {
+.stepper-item::before, .stepper-item::after  {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--YRGO-Grey);
     width: 100%;
-    top: 20px;
-    left: -50%;
+    top: calc(var(--_stepper-size) / 2);
+    /* left: -50%; */
     z-index: 2;
 }
 
 .stepper-item::after {
-    position: absolute;
-    content: "";
-    border-bottom: 2px solid #ccc;
-    width: 100%;
-    top: 20px;
     left: 50%;
-    z-index: 2;
+}
+.stepper-item::before {
+    left: -50%;
 }
 
 .stepper-item .step-counter {
     position: relative;
-    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    background: var(--YRGO-White);
+    width: var(--_stepper-size);
+    height: var(--_stepper-size);
     border-radius: 50%;
-    background: #ccc;
-    margin-bottom: 6px;
+    border: 4px solid var(--YRGO-Grey);
+    box-sizing: border-box;
+    /* margin-bottom: 6px; */
+    z-index: 5;
+    cursor: pointer;
 }
 
-.stepper-item.active {
+.stepper-item .step-counter svg {
+    fill: var(--YRGO-White);
+    font-size: 1.5rem;
+}
+
+.stepper-item.active .step-counter{
     font-weight: bold;
+    background-color: var(--YRGO-White);
+    border: 4px solid var(--YRGO-Blue);
 }
 
 .stepper-item.completed .step-counter {
-    background-color: #4bb543;
+    background-color: var(--YRGO-Blue);
+    border: none;
 }
 
 .stepper-item.completed::after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #4bb543;
-    width: 100%;
-    top: 20px;
-    left: 50%;
+    border-bottom: 2px solid var(--YRGO-Blue);
+    /* width: 100%; */
+    /* top: 20px;
+    left: 50%; */
     z-index: 3;
 }
 
