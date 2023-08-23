@@ -153,47 +153,8 @@ header nav ul li.active a::after {
     gap: 2.6em;
 }
 
-.progress-bar {
-    --_border-size: 4px;
-    --_check-point-size: 2rem;
-    --_check-point-count: 3;
 
-    position: relative;
-    display: flex;
-    gap: 2rem;
-}
-.progress-bar::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: calc(var(--_check-point-size) + var(--_border-size));
-    background-color: var(--YRGO-Grey);
-    width: calc(
-        ((var(--_check-point-count) * 2) * var(--_check-point-size)) -
-            (var(--_check-point-count) * var(--_border-size) * 2)
-    );
-    height: 3px;
-    /* z-index: -1; */
-}
-.progress-bar .check-point {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--YRGO-White);
-
-    border-radius: 50%;
-    border: var(--_border-size) solid var(--YRGO-Grey);
-    width: var(--_check-point-size);
-    aspect-ratio: 1/1;
-}
-
-.progress-bar .check-point svg {
-    font-size: 1.5em;
-    fill: var(--YRGO-White);
-}
-
-/*  */
+/* Stepper */
 
 .stepper-wrapper {
     display: flex;
