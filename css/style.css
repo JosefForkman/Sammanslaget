@@ -144,13 +144,13 @@ header nav ul li.active a::after {
 .table {
     display: grid;
     grid-template-columns: repeat(4, 237.25px);
-    grid-template-rows: repeat(17, 70px);
+    grid-template-rows: repeat(17, auto);
     margin-bottom: 127px;
 }
 
 .table-box {
     width: 237.25px;
-    height: 70px;
+    height: 14rem;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -162,10 +162,12 @@ header nav ul li.active a::after {
     width: 100%;
     grid-column: 1 / -1;
     background-color: #C9DBF8;
+    height: 70px;
 }
 
 .grid-top {
     background-color: #A4C2F4;
+    height: 70px;
 }
 
 /* Footer */
@@ -251,7 +253,7 @@ footer p {
 
     max-width: 1200px;
     margin-inline: auto;
-    margin-block: 320px;
+    margin-block: 86px;
 }
 
 .demo-game h2 {
