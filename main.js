@@ -1,3 +1,4 @@
+const demoGameContainer = document.querySelector(".demo-game");
 const steppers = document.querySelectorAll(".stepper-item");
 
 const gameFrame = document.querySelector("iframe");
@@ -5,7 +6,8 @@ const backBtn = document.querySelector(".back-btn");
 const nextBtn = document.querySelector(".next-btn");
 
 const time = document.querySelector(".time");
-let stopwatchId = stopwatch()
+let stopwatchId = null;
+let currentSelectedStepper = 0;
 
 const demoGame = [
     "https://scratch.mit.edu/projects/884792694/embed",
@@ -13,7 +15,23 @@ const demoGame = [
     "https://scratch.mit.edu/projects/884464291/embed",
 ];
 
-let currentSelectedStepper = 0;
+/* Restores the demo game after not in view */
+const observer = new IntersectionObserver(
+    (entries) => {
+        if (currentSelectedStepper != steppers.length - 1) {
+            currentSelectedStepper = 0
+            selectStepper(steppers[currentSelectedStepper])
+        }
+
+        clearInterval(stopwatchId);
+        stopwatchId = startTimer();
+    },
+    {
+        threshold: 0.7,
+    }
+);
+
+observer.observe(demoGameContainer);
 
 steppers.forEach((stepper) =>
     stepper.addEventListener("click", (event) => {
@@ -59,13 +77,13 @@ function setGameIframe() {
     if (demoGame.length >= currentSelectedStepper) {
         gameFrame.src = demoGame[currentSelectedStepper];
     }
-    
+
     /* Check if on last stepper */
     if (currentSelectedStepper == demoGame.length - 1) {
-        clearInterval(stopwatchId)
+        clearInterval(stopwatchId);
     }
 }
-function stopwatch() {
+function startTimer() {
     const countDate = new Date().setTime(new Date().getTime() + 1000 * 60);
 
     return setInterval(() => {
@@ -84,4 +102,3 @@ function stopwatch() {
         }
     }, 1000);
 }
-
