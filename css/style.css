@@ -42,14 +42,20 @@ p {
     font-weight: 500;
 }
 
+.info-text {
+    font-weight: 400;
+}
+
 img {
     width: 100%;
 }
+
 .text-block {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
+
 main {
     margin-inline: 2.5rem;
 }
@@ -133,6 +139,25 @@ header nav ul li.active a::after {
     height: 0.12em;
 }
 
+/* Table */
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(4, 237.25px);
+    grid-template-rows: repeat(17, 70px);
+    margin-bottom: 127px;
+}
+
+.table-box {
+    width: 237.25px;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    color: var(--YRGO-Black);
+    font-size: 24px;
+}
+
 /* Footer */
 footer {
     display: flex;
@@ -199,9 +224,7 @@ footer p {
 }
 
 .informations {
-    display: flex;
     gap: 10rem;
-
     margin-bottom: 69px;
 }
 
@@ -373,8 +396,4 @@ footer p {
 
 .person-header {
     margin-bottom: 2rem;
-}
-
-.person-info {
-    font-weight: 400;
 }
