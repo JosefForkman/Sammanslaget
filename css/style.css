@@ -102,6 +102,8 @@ header {
 }
 
 header .logo {
+    display: flex;
+    align-items: center;
     color: var(--yrgo-black, #121212);
     font-size: 1.5rem;
     font-weight: 700;
