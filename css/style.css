@@ -299,7 +299,10 @@ footer p {
 }
 
 .person {
+    width: auto;
     padding: 1rem 0 3rem 0;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .picture {
