@@ -138,34 +138,36 @@ header nav ul li.active a::after {
 
 /* Table */
 
-.table {
-    display: grid;
-    grid-template-columns: repeat(4, 237.25px);
-    grid-template-rows: repeat(17, auto);
+  .table {
+    border-collapse: collapse;
+    width: 70%;
     margin-bottom: 127px;
-}
+  }
 
-.table-box {
-    width: 237.25px;
-    height: 14rem;
+  .table th, .table td {
     border: 1px solid black;
-    display: flex;
-    align-items: center;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .table-box {
+    width: 237.25px;
+    height: 70px;
+    text-align: left;
+    border: 1px solid black;
     color: var(--YRGO-Black);
     font-size: 24px;
-}
+  }
 
-.grid-span {
-    width: 100%;
-    grid-column: 1 / -1;
-    background-color: #C9DBF8;
+  .grid-top {
     height: 70px;
-}
-
-.grid-top {
     background-color: #A4C2F4;
-    height: 70px;
-}
+  }
+
+  .grid-span {
+    width: 100%;
+    background-color: #C9DBF8;
+  }
 
 /* Footer */
 footer {

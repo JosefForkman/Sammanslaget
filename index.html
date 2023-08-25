@@ -106,68 +106,115 @@
                 </section>
             </div>
 
-            <section class="table">
-                
-                <div class="table-box grid-top" style="border-radius: 8px 0 0 0;"><h2>Minigame</h2></div>
-                <div class="table-box grid-top"><h2>Tillgång till</h2></div>
-                <div class="table-box grid-top"><h2>Förklaring</h2></div>
-                <div class="table-box grid-top" style="border-radius: 0 8px 0 0;"><h2>Vad den testar</h2></div>
-                
-                <div class="table-box grid-span">Programming Fundamentals</div>
-                
-                <div class="table-box">Labyrinth</div>
-                <div class="table-box">Rotera x grader<br>Flytta x steg</div>
-                <div class="table-box">En karaktär står vid ingången till en labyrint. Målet är att med kommandona flytta, rotera och få karaktären till slutet av labyrinten.</div>
-                <div class="table-box">Fundamental kunskap om programmering och logisk följd</div>
-                <div class="table-box">Skål med kulor</div>
-                <div class="table-box">if(red/blue)<br>Repeat</div>
-                <div class="table-box">I en skål finns ett antal kulor. Målet är att gå igenom kulorna och räkna hur många röda kulor det finns.</div>
-                <div class="table-box">for-loops<br>if-statements</div>
-                <div class="table-box">Paraply</div>
-                <div class="table-box">Paraplyposition<br>Karaktärsposition<br>Flytta x steg per sekund</div>
-                <div class="table-box">En karaktär står i regn med ett paraply som svävar fram och tillbaka ovanför. Målet är att karaktären ska hålla sig torr.</div>
-                <div class="table-box">Positionsvektorer<br>Jämföra position</div>
-                <div class="table-box">Dörrvakt</div>
-                <div class="table-box">Lista med ålder<br>if(ålder)<br>foreach / for loop<br>Wait for seconds</div>
-                <div class="table-box">En dörrvakt står vid en dörr med en kö av folk. Dörrvakten får bara släppa in folk över en viss ålder.</div>
-                <div class="table-box">For-loops och if-statements<br>Wait</div>
-                <div class="table-box">Ankan</div>
-                <div class="table-box"></div>
-                <div class="table-box">En top-down view av en anka som kan simma i en damm. I koden finns onödig köd som kan tas bort utan att ändra funktion.</div>
-                <div class="table-box">Debugging<br>Logikföljd</div>
-                <div class="table-box">Siktet</div>
-                <div class="table-box">Variabel: x<br>Variabel: y</div>
-                <div class="table-box">En pil skjuts mote en måltavla genom att först flytta x steg åt höger, y steg uppåt, sen skjut. Målet är att sätta in rätt x och y för att träffa mitten.</div>
-                <div class="table-box">Variabler</div>
-                <div class="table-box grid-span">Matte</div>
-                <div class="table-box">Måla väggen</div>
-                <div class="table-box"></div>
-                <div class="table-box">En vägg med mått XxY visas. Man har en färgburk där 1 unit räcker till en m2. Målet är att välja färgburk med rätt mängd färg.</div>
-                <div class="table-box">Matte<br>Area-räkning</div>
-                <div class="table-box">Mattesortering</div>
-                <div class="table-box"></div>
-                <div class="table-box">Lådor med decimaltal kommer på ett rullband och målet är att dra dem till lastbilar markerade med bråktal</div>
-                <div class="table-box">Decimaltal<br>Bråktal</div>
-                <div class="table-box grid-span">Logik</div>
-                <div class="table-box">Perfekt match</div>
-                <div class="table-box"></div>
-                <div class="table-box">En person ger en lista på kriterier till en partner och spelaren måste trycka på den som passar in på beskrivningen</div>
-                <div class="table-box">Logik<br>Uteslutning</div>
-                <div class="table-box">Mönster</div>
-                <div class="table-box"></div>
-                <div class="table-box">En samling former visas och målet är att trycka på den form som kommer härnäst i mönstret</div>
-                <div class="table-box">Mönsterigenkänning</div>
-                <div class="table-box grid-span">Game knowledge</div>
-                <div class="table-box">Företagssortering</div>
-                <div class="table-box">Drag and drop</div>
-                <div class="table-box">Figurer av kända karaktärer kommer på ett rullband. Målet är att dra dem till den lastbil med rätt företagslogga på som karaktären kommer ifrån.</div>
-                <div class="table-box">Game knowledge</div>
-                <div class="table-box" style="border-radius: 0 0 0 8px;">Controller mapping</div>
-                <div class="table-box">Knappar</div>
-                <div class="table-box">En känd kontroller utan text på knapparna visas. En knapp lyser upp och målet är att hitta och trycka på rätt text i en lista.</div>
-                <div class="table-box" style="border-radius: 0 0 8px 0;">Game knowledge</div>
+            <table class="table">
+                <tr>
+                <th class="table-box grid-top"><h2>Minigame</h2></th>
+                <th class="table-box grid-top"><h2>Tillgång till</h2></th>
+                <th class="table-box grid-top"><h2>Förklaring</h2></th>
+                <th class="table-box grid-top"><h2>Vad den testar</h2></th>
+                </tr>
 
-            </section>
+                <tr>
+                <th colspan="4" class="table-box grid-span">Programming Fundamentals</th>
+                </tr>
+                
+                <tr>
+                <td class="table-box">Labyrinth</td>
+                <td class="table-box">Rotera x grader<br>Flytta x steg</td>
+                <td class="table-box">En karaktär står vid ingången till en labyrint. Målet är att med kommandona flytta, rotera och få karaktären till slutet av labyrinten.</td>
+                <td class="table-box">Fundamental kunskap om programmering och logisk följd</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Skål med kulor</td>
+                <td class="table-box">if(red/blue)<br>Repeat</td>
+                <td class="table-box">I en skål finns ett antal kulor. Målet är att gå igenom kulorna och räkna hur många röda kulor det finns.</td>
+                <td class="table-box">for-loops<br>if-statements</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Paraply</td>
+                <td class="table-box">Paraplyposition<br>Karaktärsposition<br>Flytta x steg per sekund</td>
+                <td class="table-box">En karaktär står i regn med ett paraply som svävar fram och tillbaka ovanför. Målet är att karaktären ska hålla sig torr.</td>
+                <td class="table-box">Positionsvektorer<br>Jämföra position</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Dörrvakt</td>
+                <td class="table-box">Lista med ålder<br>if(ålder)<br>foreach / for loop<br>Wait for seconds</td>
+                <td class="table-box">En dörrvakt står vid en dörr med en kö av folk. Dörrvakten får bara släppa in folk över en viss ålder.</td>
+                <td class="table-box">For-loops och if-statements<br>Wait</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Ankan</td>
+                <td class="table-box"></td>
+                <td class="table-box">En top-down view av en anka som kan simma i en damm. I koden finns onödig köd som kan tas bort utan att ändra funktion.</td>
+                <td class="table-box">Debugging<br>Logikföljd</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Siktet</td>
+                <td class="table-box">Variabel: x<br>Variabel: y</td>
+                <td class="table-box">En pil skjuts mote en måltavla genom att först flytta x steg åt höger, y steg uppåt, sen skjut. Målet är att sätta in rätt x och y för att träffa mitten.</td>
+                <td class="table-box">Variabler</td>
+                </tr>
+
+                <tr>
+                <th colspan="4" class="table-box grid-span">Matte</th>
+                </tr>
+
+                <tr>
+                <td class="table-box">Måla väggen</td>
+                <td class="table-box"></td>
+                <td class="table-box">En vägg med mått XxY visas. Man har en färgburk där 1 unit räcker till en m2. Målet är att välja färgburk med rätt mängd färg.</td>
+                <td class="table-box">Matte<br>Area-räkning</td>
+                </tr>
+
+                <tr>
+                <td class="table-box">Mattesortering</td>
+                <td class="table-box"></td>
+                <td class="table-box">Lådor med decimaltal kommer på ett rullband och målet är att dra dem till lastbilar markerade med bråktal</td>
+                <td class="table-box">Decimaltal<br>Bråktal</td>
+            </tr>
+
+            <tr>
+                <th colspan="4" class="table-box grid-span">Logik</th>
+            </tr>
+
+            <tr>
+                <td class="table-box">Perfekt match</td>
+                <td class="table-box"></td>
+                <td class="table-box">En person ger en lista på kriterier till en partner och spelaren måste trycka på den som passar in på beskrivningen</td>
+                <td class="table-box">Logik<br>Uteslutning</td>
+            </tr>
+
+            <tr>
+                <td class="table-box">Mönster</td>
+                <td class="table-box"></td>
+                <td class="table-box">En samling former visas och målet är att trycka på den form som kommer härnäst i mönstret</td>
+                <td class="table-box">Mönsterigenkänning</td>
+            </tr>
+
+            <tr>
+                <th colspan="4" class="table-box grid-span">Game knowledge</th>
+            </tr>
+
+            <tr>
+                <td class="table-box">Företagssortering</td>
+                <td class="table-box">Drag and drop</td>
+                <td class="table-box">Figurer av kända karaktärer kommer på ett rullband. Målet är att dra dem till den lastbil med rätt företagslogga på som karaktären kommer ifrån.</td>
+                <td class="table-box">Game knowledge</td>
+            </tr>
+
+            <tr>
+                <td class="table-box">Controller mapping</td>
+                <td class="table-box">Knappar</td>
+                <td class="table-box">En känd kontroller utan text på knapparna visas. En knapp lyser upp och målet är att hitta och trycka på rätt text i en lista.</td>
+                <td class="table-box">Game knowledge</td>
+            </tr>
+
+            </table>
 
             <section class="demo-game">
                 <h2>Urvalstest Game Creator Programmer</h2>
