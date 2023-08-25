@@ -138,36 +138,56 @@ header nav ul li.active a::after {
 
 /* Table */
 
-  .table {
-    border-collapse: collapse;
+.table {
+    --_border-radius: 0.5rem;
+    
+    border-spacing: 0;
     width: 70%;
     margin-bottom: 127px;
-  }
+}
 
-  .table th, .table td {
+/* Table cell top left */
+.table thead tr:first-child th:first-child {
+    border-top-left-radius: var(--_border-radius);
+}
+/* Table cell top right */
+.table thead tr:first-child th:last-child {
+    border-top-right-radius: var(--_border-radius);
+}
+/* Table cell bottom left */
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: var(--_border-radius);
+}
+/* Table cell bottom right */
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: var(--_border-radius);
+}
+
+.table th,
+.table td {
     border: 1px solid black;
     padding: 10px;
     font-weight: 400;
-  }
+}
 
-  .table-box {
+.table-box {
     width: 237.25px;
     height: 70px;
     text-align: left;
     border: 1px solid black;
     color: var(--YRGO-Black);
     font-size: 24px;
-  }
+}
 
-  .grid-top {
+.grid-top {
     height: 70px;
-    background-color: #A4C2F4;
-  }
+    background-color: #a4c2f4;
+}
 
-  .grid-span {
+.grid-span {
     width: 100%;
-    background-color: #C9DBF8;
-  }
+    background-color: #c9dbf8;
+}
 
 /* Footer */
 footer {
