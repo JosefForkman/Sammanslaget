@@ -85,11 +85,6 @@ button:hover.secondary {
     background-color: var(--YRGO-Light-Blue);
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
-
 /* header */
 header {
     display: flex;
@@ -239,6 +234,7 @@ footer p {
 }
 
 .informations {
+    display: flex;
     gap: 10rem;
     margin-bottom: 69px;
 }
