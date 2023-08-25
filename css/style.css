@@ -50,11 +50,6 @@ img {
     width: 100%;
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
-
 .text-block {
     display: flex;
     flex-direction: column;
